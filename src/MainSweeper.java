@@ -1,6 +1,7 @@
 
 public class MainSweeper {
-	public static void makeBoard() {
-		
-	}
+	//EHLLO 
+System.out.print("This is cool");
+for x in y:
+	this is a test
 }
