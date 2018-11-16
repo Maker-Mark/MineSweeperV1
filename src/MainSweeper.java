@@ -27,24 +27,34 @@ public class MainSweeper {
 
 		System.out.println("how many mines do you want to make?");
 		int mines = sc.nextInt();
-
-//		setMines(mines, board);
-
-
-		for (int i = 0; i < cols; i++) {
+	
+		setMines(mines, board);
+		
+		
+		
+		for (int iCol = 0; iCol < cols; iCol++) {
 			System.out.println();
-			for (int j = 0; j < rows; j++) {
-				if (board[i][j] == false) {
+			for (int jRow = 0; jRow < rows; jRow++) {
+				if (board[iCol][jRow] == false) {
 					System.out.print(1);
 				}else {
-				System.out.print(0);
+					System.out.print(0);
 				}
-				
+
 			}
 
+		}
+	}
 
-
-
+	public static void setMines(int mines, boolean[][] board) {
+		int mineCount = 0;
+		while(mineCount<mines) {
+			int col = new Random().nextInt(board.length);
+			int row = new Random().nextInt(board[0].length);
+			if(board[col][row] != true) {
+				board[col][row] = true;
+				mineCount++;
+			}
 		}
 	}
 }
