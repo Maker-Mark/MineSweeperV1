@@ -26,16 +26,24 @@ public class MainSweeper {
 			}
 		}
 
-		System.out.println("How many ?");
-		int mines = sc.nextInt();
-
+		System.out.println("How many mines should your " + rows+ " by " + cols+ " board have?");
+    int mines = sc.nextInt();
+    if( mines < rows*cols){
+      
+		// int mines = sc.nextInt();
 		setMines(mines, board);
+      
+    }else{
+      System.out.println("You tried to put too many mines, the board is only " + rows + "by " + cols);
+    }
+    //Need to add reloop to allow user to re-enter mines if its too many
 
 		for (int iCol = 0; iCol < cols; iCol++) {
 			System.out.println();
 			for (int jRow = 0; jRow < rows; jRow++) {
 				if (board[iCol][jRow] == false) {
 					System.out.print(1);
+          //What is happening here?
 				} else {
 					System.out.print(0);
 				}
