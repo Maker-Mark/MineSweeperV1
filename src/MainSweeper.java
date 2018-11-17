@@ -27,7 +27,7 @@ public class MainSweeper {
 
 			}
 		}
-    
+    //test ocmment
 		System.out.println("How many mines should your " + rows+ " by " + cols+ " board have?");
     int mines = sc.nextInt();
     if( mines < rows * cols){
