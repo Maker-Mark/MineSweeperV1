@@ -16,38 +16,46 @@ public class MainSweeper {
 		cols = sc.nextInt();	
 		System.out.println("Ok, cool your board will be " + rows + " rows and " + cols + " columns!");
 
-
-
-		boolean [][] board = new boolean[cols][rows] ;
+    //Making a 2D boolean array w size #cols x #rows
+    //This means each spot in the array will either be true of false
+    //So when we go though the table, we can check for a condition,
+		boolean [][] board = new boolean[cols][rows];
+    
 		for (int i = 0; i < cols; i++) {
 			for (int j = 0; j < rows; j++) {
 				board[i][j] = false;
 
 			}
 		}
-
+    
 		System.out.println("How many mines should your " + rows+ " by " + cols+ " board have?");
     int mines = sc.nextInt();
-    if( mines < rows*cols){
+    if( mines < rows * cols){
       
-		// int mines = sc.nextInt();
 		setMines(mines, board);
-      
-    }else{
+ 
+    } 
+    else 
+    {
       System.out.println("You tried to put too many mines, the board is only " + rows + "by " + cols);
     }
     //Need to add reloop to allow user to re-enter mines if its too many
 
-		for (int iCol = 0; iCol < cols; iCol++) {
+		for (int iCol = 0; iCol < cols; iCol++) 
+    {
+      //Going though columns
 			System.out.println();
-			for (int jRow = 0; jRow < rows; jRow++) {
-				if (board[iCol][jRow] == false) {
+      //Printing line to make table
+      
+			for (int jRow = 0; jRow < rows; jRow++) 
+      { //Going though rows
+        
+				if (board[iCol][jRow] == false) { //If 
 					System.out.print(1);
-          //What is happening here?
+          //What is happening here? Tell me bro
 				} else {
 					System.out.print(0);
 				}
-
 			}
 
 		}
@@ -56,7 +64,8 @@ public class MainSweeper {
 		for(int i = 0; i < cols; i ++) {
 			for(int j = 0; j < rows; j++) {
 				int count = 0;
-				if(i != cols - 1 && board[i+1][j]) {//up
+				if(i != cols - 1 && board[i+1][j]) 
+        {//up
 					count++;
 				}
 				if(i != cols - 1 && j != rows - 1 && board[i+1][j+1]) {//upper right
@@ -94,8 +103,6 @@ public class MainSweeper {
 			}
 
 		}
-
-
 
 //		while(!done) {
 //
