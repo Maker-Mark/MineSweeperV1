@@ -14,7 +14,7 @@ public class MainSweeper {
 		rows = sc.nextInt();
 		System.out.println("How many cols in the board?");
 		cols = sc.nextInt();	
-		System.out.println("Ok, cool your board will be " + rows + " rows and " + cols + "columns!");
+		System.out.println("Ok, cool your board will be " + rows + " rows and " + cols + " columns!");
 
 
 
@@ -26,7 +26,7 @@ public class MainSweeper {
 			}
 		}
 
-		System.out.println("how many mines do you want to make?");
+		System.out.println("How many ?");
 		int mines = sc.nextInt();
 
 		setMines(mines, board);
