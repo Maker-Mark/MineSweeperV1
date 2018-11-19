@@ -10,6 +10,7 @@ public class MainSweeper {
 		Scanner sc = new Scanner(System.in);	
 
 
+    
 		System.out.println("How many rows in the board?");
 		rows = sc.nextInt();
 		System.out.println("How many cols in the board?");
@@ -27,7 +28,7 @@ public class MainSweeper {
 
 			}
 		}
-    //test ocmment
+    
 		System.out.println("How many mines should your " + rows+ " by " + cols+ " board have?");
     int mines = sc.nextInt();
     if( mines < rows * cols){
@@ -37,7 +38,7 @@ public class MainSweeper {
     } 
     else 
     {
-      System.out.println("You tried to put too many mines, the board is only " + rows + "by " + cols);
+      System.out.println("You tried to put too many mines, the board is only " + rows + " by " + cols);
     }
     //Need to add reloop to allow user to re-enter mines if its too many
 
